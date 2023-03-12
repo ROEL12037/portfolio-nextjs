@@ -3,7 +3,7 @@ import Image from "next/image";
 import { formatDate } from "@/utils/dateHelpers";
 import { formatTitle } from "@/utils/stringHelpers";
 
-export default function ProjectCard({ repo }) {
+export default function ProjectCard({ repo, isOddClass }) {
 	let imageURL;
 
 	switch (repo.repo.name) {
@@ -25,7 +25,7 @@ export default function ProjectCard({ repo }) {
 	}
 
 	return (
-		<section className="bg-alice rounded-lg shadow-lg relative">
+		<section className={`bg-alice rounded-lg shadow-lg relative ${isOddClass}`}>
 			<div className="px-6 py-4">
 				<h3 className="text-cerulean text-xl mb-2 font-medium">
 					{formatTitle(repo.repo.name)}

@@ -19,6 +19,8 @@ export default function Projects({ starredRepos }) {
 		return <Spinner />;
 	}
 
+	const isOdd = (data.length + 1) % 2 !== 0;
+
 	return (
 		<main className="flex items-center justify-center w-full min-h-[92vh]">
 			<section className="flex flex-col items-center mx-4 mb-4">
@@ -42,6 +44,7 @@ export default function Projects({ starredRepos }) {
 								name: "Want to see more?",
 							},
 						}}
+						isOddClass={isOdd ? "sm:col-span-2" : ""}
 					/>
 				</section>
 			</section>

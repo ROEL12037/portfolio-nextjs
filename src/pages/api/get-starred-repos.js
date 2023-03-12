@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
 	const response =
 		await octokit.rest.activity.listReposStarredByAuthenticatedUser({
-			per_page: 3,
+			per_page: 5,
 			headers: { accept: "application/vnd.github.star+json" },
 			sort: "starred",
 			direction: "desc",
