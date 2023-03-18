@@ -33,6 +33,15 @@ export default function Home() {
 							applications.
 						</p>
 						<p className="mt-2">
+							I try to do one Codewars problem a day. My current score:
+							{/* eslint-disable-next-line @next/next/no-img-element*/}
+							<img
+								src={"https://www.codewars.com/users/roel12037/badges/micro"}
+								alt="codewars-badge"
+								className="inline-block"
+							/>
+						</p>
+						<p className="mt-2">
 							If you&apos;re looking to build a site or solution, feel free to{" "}
 							<Link
 								href={"/contact"}
