@@ -29,11 +29,13 @@ export default function Home() {
 					<h2 className="text-4xl mt-4 text-cerulean">About Me</h2>
 					<blockquote className="max-w-[775px] font-semibold tracking-wider">
 						<p className="mt-2">
-							I am a software developer who designs and deploys full-stack web
-							applications.
+							I&apos;m a software developer who crafts visually appealing and
+							reliable full-stack web applications.
 						</p>
+
 						<p className="mt-2">
-							I try to do one Codewars problem a day. My current score:
+							As a firm believer in continuous growth, I challenge myself daily
+							with Codewars problems. My current score is:
 							{/* eslint-disable-next-line @next/next/no-img-element*/}
 							<img
 								src={"https://www.codewars.com/users/roel12037/badges/micro"}
@@ -41,16 +43,18 @@ export default function Home() {
 								className="inline-block"
 							/>
 						</p>
+
 						<p className="mt-2">
-							If you&apos;re looking to build a site or solution, feel free to{" "}
+							If you&apos;re looking to build a robust site or digital solution,
+							feel free to{" "}
 							<Link
 								href={"/contact"}
 								className="text-cerulean hover:text-moonstone underline font-semibold">
 								reach out
 							</Link>
-							. I am well versed in technologies such as: HTML, CSS, JavaScript,
-							REST APIs, Node.js, React, and SQL/NoSQL. You can find some of the
-							projects I&apos;ve worked on{" "}
+							. I&apos;m proficient in technologies such as: HTML, CSS,
+							JavaScript, REST APIs, Node.js, React, and SQL/NoSQL DBs. Explore
+							some the projects I&apos;ve worked on{" "}
 							<Link
 								href={"/projects"}
 								className="text-cerulean hover:text-moonstone underline font-semibold">
@@ -59,10 +63,11 @@ export default function Home() {
 							.
 						</p>
 						<p className="mt-2">
-							On a more personal note, when not at my desk, I love to take
-							advantage of what Austin has to offer. Which really just means
-							I&apos;m either watching stand-up comedy, eating brisket or tacos,
-							riding my bicycle, going on a hike, or paddleboarding.
+							On a more personal note, when I&apos;m not at my desk, I love to
+							take advantage of what Austin has to offer. You might find me
+							enjoying stand-up comedy, savoring brisket or tacos, or staying
+							active with biking, hiking, paddleboarding, co-ed soccer, ultimate
+							frisbee, and sand volleyball.
 						</p>
 					</blockquote>
 				</section>
