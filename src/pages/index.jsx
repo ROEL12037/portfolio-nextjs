@@ -6,11 +6,11 @@ export default function Home() {
 		<main className="min-h-[92vh] flex">
 			<div className="flex flex-col items-center justify-center mx-auto">
 				<section className="w-full flex px-4">
-					<section>
+					<section className="max-w-[250px]">
 						<Image
 							src="/img/headshot.jpg"
-							width={250}
-							height={250}
+							width={570}
+							height={777}
 							alt="me"
 							className="rounded-lg"
 							priority
