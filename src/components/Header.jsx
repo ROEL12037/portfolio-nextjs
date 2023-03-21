@@ -40,19 +40,22 @@ export default function Header() {
 						<a
 							href="https://www.linkedin.com/in/roel12037/"
 							target="_blank"
-							className="y-auto fab fa-linkedin-in text-2xl"></a>
+							className="y-auto fab fa-linkedin-in text-2xl"
+							aria-hidden></a>
 					</li>
 					<li className="mx-2 my-auto hover:text-cerulean">
 						<a
 							href="https://github.com/ROEL12037"
 							target="_blank"
-							className="fab fa-github text-2xl"></a>
+							className="fab fa-github text-2xl"
+							aria-hidden></a>
 					</li>
 					<li className="mx-2 my-auto hover:text-cerulean">
 						<a
 							href="https://twitter.com/ROELv12037"
 							target="_blank"
-							className="fab fa-twitter text-2xl"></a>
+							className="fab fa-twitter text-2xl"
+							aria-hidden></a>
 					</li>
 				</ul>
 			</nav>
