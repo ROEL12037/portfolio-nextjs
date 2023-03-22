@@ -25,7 +25,7 @@ export default function Home() {
 					</section>
 				</section>
 
-				<section className="w-full px-4">
+				<section className="w-full px-4 mb-4">
 					<h2 className="text-4xl mt-4 text-cerulean">About Me</h2>
 					<blockquote className="max-w-[775px] font-semibold tracking-wider">
 						<p className="mt-2">
