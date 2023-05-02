@@ -20,8 +20,8 @@ export default function Home() {
 						/>
 					</section>
 
-					<section className="self-end ml-2">
-						<h1 className="text-5xl text-cyan-700">Roel Moreno</h1>
+					<section className="self-end ml-4">
+						<h1 className="text-5xl text-cerulean">Roel Moreno</h1>
 						<h3 className="text-2xl font-bold tracking-wider">
 							Full-Stack Software Developer
 						</h3>
@@ -29,7 +29,7 @@ export default function Home() {
 				</section>
 
 				<section className="w-full px-4">
-					<h2 className="text-4xl mt-4 text-cyan-700">About Me</h2>
+					<h2 className="text-4xl mt-4 text-cerulean">About Me</h2>
 					<blockquote className=" max-w-[775px] pl-4 font-medium tracking-widest">
 						<p className="mt-2">
 							I am a software developer who designs and deploys full-stack web
@@ -39,7 +39,7 @@ export default function Home() {
 							If you&apos;re looking to build a site or solution, feel free to{" "}
 							<Link
 								href={"/contact"}
-								className="hover:text-cyan-700 underline">
+								className="hover:text-cerulean underline">
 								reach out
 							</Link>
 							. I am well versed in technologies such as: HTML, CSS, JavaScript,
@@ -47,7 +47,7 @@ export default function Home() {
 							recent projects I&apos;ve worked on{" "}
 							<Link
 								href={"/projects"}
-								className="hover:text-cyan-700 underline">
+								className="hover:text-cerulean underline">
 								here
 							</Link>
 							.
