@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "../../public/css/styles.css";
 import Header from "@/components/Header";
 
 export default function App({ Component, pageProps }) {

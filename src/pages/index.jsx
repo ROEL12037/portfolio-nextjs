@@ -12,7 +12,7 @@ export default function Home() {
 				<section className="w-full flex px-4">
 					<section>
 						<Image
-							src="/headshot.jpg"
+							src="/img/headshot.jpg"
 							width={250}
 							height={250}
 							alt="me"
@@ -21,7 +21,7 @@ export default function Home() {
 					</section>
 
 					<section className="self-end ml-4">
-						<h1 className="text-5xl text-cerulean">Roel Moreno</h1>
+						<h1 className="text-5xl text-cyan-700">Roel Moreno</h1>
 						<h3 className="text-2xl font-bold tracking-wider">
 							Full-Stack Software Developer
 						</h3>
