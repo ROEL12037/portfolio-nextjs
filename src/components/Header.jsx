@@ -5,13 +5,13 @@ export default function Header() {
 	const router = useRouter();
 
 	// styles
-	const activeStyles = "my-auto px-1 py-1 bg-cyan-800";
-	const inactiveStyles = "my-auto px-1 py-1 hover:text-cyan-800";
+	const activeStyles = "my-auto px-2 py-1 bg-cyan-800 text-white";
+	const inactiveStyles = "my-auto px-2 py-1 hover:text-cyan-800";
 
 	return (
-		<header className="h-8 border-b-2">
-			<nav className="flex flex-row justify-between">
-				<ul className="flex">
+		<header>
+			<nav className="h-[8vh] flex justify-between">
+				<ul className="flex y	-auto">
 					<li
 						className={
 							router.pathname == "/" ? `${activeStyles}` : `${inactiveStyles}`
@@ -36,27 +36,24 @@ export default function Header() {
 					</li>
 				</ul>
 
-				<ul className="flex">
-					<li className="mx-1 my-auto hover:text-cyan-800">
+				<ul className="flex y-auto">
+					<li className="mx-2 my-auto hover:text-cyan-800">
 						<a
 							href="https://www.linkedin.com/in/roel12037/"
-							target="_blank">
-							LinkedIn
-						</a>
+							target="_blank"
+							className="y-auto fab fa-linkedin-in text-2xl"></a>
 					</li>
-					<li className="mx-1 my-auto hover:text-cyan-800">
+					<li className="mx-2 my-auto hover:text-cyan-800">
 						<a
 							href="https://github.com/ROEL12037"
-							target="_blank">
-							Github
-						</a>{" "}
+							target="_blank"
+							className="fab fa-github text-2xl"></a>
 					</li>
-					<li className="mx-1 my-auto hover:text-cyan-800">
+					<li className="mx-2 my-auto hover:text-cyan-800">
 						<a
 							href="https://twitter.com/ROELv12037"
-							target="_blank">
-							Twitter
-						</a>
+							target="_blank"
+							className="fab fa-twitter text-2xl"></a>
 					</li>
 				</ul>
 			</nav>
