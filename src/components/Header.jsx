@@ -5,8 +5,8 @@ export default function Header() {
 	const router = useRouter();
 
 	// styles
-	const activeStyles = "my-auto px-2 py-1 bg-cyan-800 text-white";
-	const inactiveStyles = "my-auto px-2 py-1 hover:text-cyan-800";
+	const activeStyles = "my-auto px-2 py-1 bg-cyan-700 text-white";
+	const inactiveStyles = "my-auto px-2 py-1 hover:text-cyan-700 font-bold";
 
 	return (
 		<header>
@@ -37,19 +37,19 @@ export default function Header() {
 				</ul>
 
 				<ul className="flex y-auto">
-					<li className="mx-2 my-auto hover:text-cyan-800">
+					<li className="mx-2 my-auto hover:text-cyan-700">
 						<a
 							href="https://www.linkedin.com/in/roel12037/"
 							target="_blank"
 							className="y-auto fab fa-linkedin-in text-2xl"></a>
 					</li>
-					<li className="mx-2 my-auto hover:text-cyan-800">
+					<li className="mx-2 my-auto hover:text-cyan-700">
 						<a
 							href="https://github.com/ROEL12037"
 							target="_blank"
 							className="fab fa-github text-2xl"></a>
 					</li>
-					<li className="mx-2 my-auto hover:text-cyan-800">
+					<li className="mx-2 my-auto hover:text-cyan-700">
 						<a
 							href="https://twitter.com/ROELv12037"
 							target="_blank"
