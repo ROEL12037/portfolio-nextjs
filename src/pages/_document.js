@@ -9,7 +9,7 @@ export default function Document() {
 					crossorigin="anonymous"
 					async></script>
 			</Head>
-			<body className="h-screen">
+			<body>
 				<Main />
 				<NextScript />
 			</body>
