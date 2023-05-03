@@ -13,7 +13,7 @@ export default function Home() {
 					<section>
 						<Image
 							src="/img/headshot.jpg"
-							width={"250"}
+							width={250}
 							height={250}
 							alt="me"
 							className="rounded-lg"

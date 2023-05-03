@@ -17,14 +17,14 @@ function dateFormatter(d) {
 }
 
 export default function Projects({ starredRepos }) {
-	const { data, error } = useSWR("api/my-api-route", fetcher, {
+	const { data, error } = useSWR("/api/get-starred-repos", fetcher, {
 		initialData: starredRepos,
 	});
 
 	// console.log(starredRepos);
 
 	if (error) return <div>Error loading starred repositories</div>;
-	if (!starredRepos) return <div>Loading...</div>;
+	if (!data) return <div>Loading...</div>;
 
 	return (
 		<main className="flex items-center justify-center w-full min-h-[92vh]">
