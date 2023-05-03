@@ -4,7 +4,7 @@ import useSWR from "swr";
 import Image from "next/image";
 
 const octokit = new Octokit({
-	auth: `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`,
+	auth: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
 	userAgent: "portfolio-nextjs-v0",
 });
 
@@ -20,10 +20,18 @@ async function fetcher() {
 	return response.data;
 }
 
+function dateFormatter(foo) {
+	return new Date(foo).toLocaleDateString("en-us", {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	});
+}
+
 export default function Projects() {
 	const { data: starredRepos, error } = useSWR("starredRepos", fetcher);
 
-	console.log(starredRepos);
+	// console.log(starredRepos);
 
 	if (error) return <div>Error loading starred repositories</div>;
 	if (!starredRepos) return <div>Loading...</div>;
@@ -61,7 +69,7 @@ export default function Projects() {
 											</a>
 										</p>
 										<p className="text-gray-700 text-base">
-											Created: {repo.repo.created_at}
+											Created: {dateFormatter(repo.repo.created_at)}
 										</p>
 									</div>
 								</div>

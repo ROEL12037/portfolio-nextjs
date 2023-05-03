@@ -6,7 +6,7 @@ export default function Document() {
 			<Head>
 				<script
 					src="https://kit.fontawesome.com/4d71720517.js"
-					crossorigin="anonymous"
+					crossOrigin="anonymous"
 					async></script>
 			</Head>
 			<body>
