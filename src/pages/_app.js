@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 import "../../public/css/styles.css";
+import "../../public/css/spinner.css";
+
 import Header from "@/components/Header";
 
 export default function App({ Component, pageProps }) {

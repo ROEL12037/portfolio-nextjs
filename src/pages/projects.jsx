@@ -1,6 +1,7 @@
 import useSWR from "swr";
+import Spinner from "@/components/Spinner";
 
-import Image from "next/image";
+import { formatDate } from "@/utils/dateHelpers";
 
 const fetcher = async (url) => {
 	const res = await fetch(url);
@@ -8,23 +9,15 @@ const fetcher = async (url) => {
 	return data;
 };
 
-function dateFormatter(d) {
-	return new Date(d).toLocaleDateString("en-us", {
-		year: "numeric",
-		month: "long",
-		day: "numeric",
-	});
-}
-
 export default function Projects({ starredRepos }) {
 	const { data, error } = useSWR("/api/get-starred-repos", fetcher, {
 		initialData: starredRepos,
 	});
 
-	// console.log(starredRepos);
+	console.log(data);
 
 	if (error) return <div>Error loading starred repositories</div>;
-	if (!data) return <div>Loading...</div>;
+	if (data) return <Spinner />;
 
 	return (
 		<main className="flex items-center justify-center w-full min-h-[92vh]">
@@ -38,13 +31,6 @@ export default function Projects({ starredRepos }) {
 								className="w-full sm:w-1/2 h-1/2 p-2"
 								key={repo.id}>
 								<div className="bg-white rounded-lg shadow-lg min-h-[150px]">
-									{/* <Image
-										className="h-48 w-full object-cover"
-										src="https://via.placeholder.com/500x300"
-										alt="Card Image"
-										width={500}
-										height={300}
-									/> */}
 									<div className="px-6 py-4">
 										<h3 className="font-bold text-gray-800 text-xl mb-2">
 											{repo.repo.name}
@@ -55,11 +41,11 @@ export default function Projects({ starredRepos }) {
 												href={repo.repo.homepage}
 												target="_blank"
 												className="hover:text-cerulean underline font-semibold">
-												{repo.repo.homepage}
+												{repo.repo.name}
 											</a>
 										</p>
 										<p className="text-gray-700 text-base">
-											Created: {dateFormatter(repo.repo.created_at)}
+											Created: {formatDate(repo.repo.created_at)}
 										</p>
 									</div>
 								</div>
@@ -68,13 +54,6 @@ export default function Projects({ starredRepos }) {
 					})}
 					<section className="w-full sm:w-1/2 h-1/2 p-2">
 						<div className="bg-white rounded-lg shadow-lg min-h-[150px]">
-							{/* <Image
-								className="h-48 w-full object-cover"
-								src="https://via.placeholder.com/500x300"
-								alt="Card Image"
-								width={500}
-								height={300}
-							/> */}
 							<div className="px-6 py-4">
 								<h3 className="font-bold text-gray-800 text-xl mb-2">
 									Want to see more?
