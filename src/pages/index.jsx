@@ -7,16 +7,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 	return (
-		<main className="h-[92vh] flex">
+		<main className="min-h-[92vh] flex">
 			<div className="flex flex-col items-center justify-center mx-auto">
 				<section className="w-full flex px-4">
 					<section>
 						<Image
 							src="/img/headshot.jpg"
-							width={250}
+							width={"250"}
 							height={250}
 							alt="me"
 							className="rounded-lg"
+							priority
 						/>
 					</section>
 
@@ -39,15 +40,15 @@ export default function Home() {
 							If you&apos;re looking to build a site or solution, feel free to{" "}
 							<Link
 								href={"/contact"}
-								className="hover:text-cerulean underline">
+								className="hover:text-cerulean underline font-semibold">
 								reach out
 							</Link>
 							. I am well versed in technologies such as: HTML, CSS, JavaScript,
-							REST APIs, Node.js, React, and SQL/NoSQL. You can find the most
-							recent projects I&apos;ve worked on{" "}
+							REST APIs, Node.js, React, and SQL/NoSQL. You can find some of my
+							favorite projects I&apos;ve worked on{" "}
 							<Link
 								href={"/projects"}
-								className="hover:text-cerulean underline">
+								className="hover:text-cerulean underline font-semibold">
 								here
 							</Link>
 							.
