@@ -1,35 +1,25 @@
-import { Octokit } from "octokit";
 import useSWR from "swr";
 
 import Image from "next/image";
 
-const octokit = new Octokit({
-	auth: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
-	userAgent: "portfolio-nextjs-v0",
-});
+const fetcher = async (url) => {
+	const res = await fetch(url);
+	const data = await res.json();
+	return data;
+};
 
-async function fetcher() {
-	const response =
-		await octokit.rest.activity.listReposStarredByAuthenticatedUser({
-			per_page: 3,
-			headers: { accept: "application/vnd.github.star+json" },
-			sort: "starred",
-			direction: "desc",
-		});
-
-	return response.data;
-}
-
-function dateFormatter(foo) {
-	return new Date(foo).toLocaleDateString("en-us", {
+function dateFormatter(d) {
+	return new Date(d).toLocaleDateString("en-us", {
 		year: "numeric",
 		month: "long",
 		day: "numeric",
 	});
 }
 
-export default function Projects() {
-	const { data: starredRepos, error } = useSWR("starredRepos", fetcher);
+export default function Projects({ starredRepos }) {
+	const { data, error } = useSWR("api/my-api-route", fetcher, {
+		initialData: starredRepos,
+	});
 
 	// console.log(starredRepos);
 
@@ -42,7 +32,7 @@ export default function Projects() {
 				<h2 className="mb-4 text-4xl text-cerulean">Recent Projects</h2>
 
 				<section className="flex flex-wrap w-full sm:flex-row flex-col">
-					{starredRepos.map((repo) => {
+					{data.map((repo) => {
 						return (
 							<section
 								className="w-full sm:w-1/2 h-1/2 p-2"
