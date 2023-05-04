@@ -1,10 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
 	return (
 		<main className="min-h-[92vh] flex">
