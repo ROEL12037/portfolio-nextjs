@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import useSWR from "swr";
 import Spinner from "@/components/Spinner";
 
@@ -17,7 +19,7 @@ export default function Projects({ starredRepos }) {
 	console.log(data);
 
 	if (error) return <div>Error loading starred repositories</div>;
-	if (data) return <Spinner />;
+	if (!data) return <Spinner />;
 
 	return (
 		<main className="flex items-center justify-center w-full min-h-[92vh]">
@@ -35,6 +37,12 @@ export default function Projects({ starredRepos }) {
 										<h3 className="font-bold text-gray-800 text-xl mb-2">
 											{repo.repo.name}
 										</h3>
+										<Image
+											src="https://via.placeholder.com/640x360"
+											alt="Card image"
+											width={640}
+											height={360}
+										/>
 										<p className="text-gray-700 text-base">
 											Demo:{" "}
 											<a
@@ -58,6 +66,12 @@ export default function Projects({ starredRepos }) {
 								<h3 className="font-bold text-gray-800 text-xl mb-2">
 									Want to see more?
 								</h3>
+								<Image
+									src="https://via.placeholder.com/640x360"
+									alt="Card image"
+									width={640}
+									height={360}
+								/>
 								<p className="text-gray-700 text-base">
 									Check out the rest of my public repositories{" "}
 									<a
