@@ -14,9 +14,17 @@ export default function Projects({ starredRepos }) {
 		initialData: starredRepos,
 	});
 
-	console.log(data);
+	// console.log(data);
 
-	if (error) return <div>Error loading starred repositories</div>;
+	if (error)
+		return (
+			<div className="flex flex-col items-center justify-center w-full min-h-[92vh]">
+				<div>{`We are experiencing technical difficulties getting the project data.`}</div>
+				<div>some gif</div>
+				<div>{error && `More info: ${error.message}`}</div>
+			</div>
+		);
+
 	if (!data) return <Spinner />;
 
 	return (
