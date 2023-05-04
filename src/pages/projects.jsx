@@ -2,6 +2,7 @@ import useSWR from "swr";
 
 import Spinner from "@/components/Spinner";
 import ProjectCard from "@/components/ProjectCard";
+import GetReposError from "@/components/GetReposError";
 
 import { fetcher } from "@/lib/octokit";
 
@@ -12,16 +13,13 @@ export default function Projects({ starredRepos }) {
 
 	// console.log(data);
 
-	if (error)
-		return (
-			<div className="flex flex-col items-center justify-center w-full min-h-[92vh]">
-				<div>{`We are experiencing technical difficulties getting the project data.`}</div>
-				<div>some gif</div>
-				<div>{error && `More info: ${error.message}`}</div>
-			</div>
-		);
+	if (error) {
+		return <GetReposError error={error} />;
+	}
 
-	if (!data) return <Spinner />;
+	if (!data) {
+		return <Spinner />;
+	}
 
 	return (
 		<main className="flex items-center justify-center w-full min-h-[92vh]">

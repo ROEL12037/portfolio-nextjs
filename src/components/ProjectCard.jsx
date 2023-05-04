@@ -41,7 +41,8 @@ export default function ProjectCard({ repo }) {
 					) : (
 						<>
 							<p className="text-gray-700 text-base">
-								Check out the rest of my public repositories{" "}
+								This website is also one of my projects. But, you can check out
+								the rest of my public work{" "}
 								<a
 									href="https://github.com/ROEL12037?tab=repositories"
 									className="hover:text-cerulean underline font-semibold"

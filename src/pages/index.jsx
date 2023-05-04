@@ -40,8 +40,8 @@ export default function Home() {
 								reach out
 							</Link>
 							. I am well versed in technologies such as: HTML, CSS, JavaScript,
-							REST APIs, Node.js, React, and SQL/NoSQL. You can find some of my
-							favorite projects I&apos;ve worked on{" "}
+							REST APIs, Node.js, React, and SQL/NoSQL. You can find some of the
+							projects I&apos;ve worked on{" "}
 							<Link
 								href={"/projects"}
 								className="hover:text-cerulean underline font-semibold">
