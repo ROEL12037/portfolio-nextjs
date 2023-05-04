@@ -1,13 +1,9 @@
-import Image from "next/image";
 import useSWR from "swr";
-import Spinner from "@/components/Spinner";
-import { formatDate } from "@/utils/dateHelpers";
 
-const fetcher = async (url) => {
-	const res = await fetch(url);
-	const data = await res.json();
-	return data;
-};
+import Spinner from "@/components/Spinner";
+import ProjectCard from "@/components/ProjectCard";
+
+import { fetcher } from "@/lib/octokit";
 
 export default function Projects({ starredRepos }) {
 	const { data, error } = useSWR("/api/get-starred-repos", fetcher, {
@@ -35,60 +31,20 @@ export default function Projects({ starredRepos }) {
 				<section className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
 					{data.map((repo) => {
 						return (
-							<section
-								className="bg-white rounded-lg shadow-lg"
-								key={repo.id}>
-								<div className="px-6 py-4">
-									<h3 className="font-bold text-gray-800 text-xl mb-2">
-										{repo.repo.name}
-									</h3>
-									<Image
-										src="https://via.placeholder.com/440x248"
-										alt="card image"
-										width={440}
-										height={248}
-										className="mx-auto"
-									/>
-									<p className="text-gray-700 text-base">
-										Demo:{" "}
-										<a
-											href={repo.repo.homepage}
-											target="_blank"
-											className="hover:text-cerulean underline font-semibold">
-											{repo.repo.name}
-										</a>
-									</p>
-									<p className="text-black">{repo.repo.description}</p>
-									<p className="text-gray-700 text-base">
-										Created: {formatDate(repo.repo.created_at)}
-									</p>
-								</div>
-							</section>
+							<ProjectCard
+								repo={repo}
+								key={repo.repo.id}
+							/>
 						);
 					})}
-					<section className="bg-white rounded-lg shadow-lg">
-						<div className="px-6 py-4">
-							<h3 className="font-bold text-gray-800 text-xl mb-2">
-								Want to see more?
-							</h3>
-							<Image
-								src="https://via.placeholder.com/448x248"
-								alt="card image"
-								width={440}
-								height={248}
-							/>
-							<p className="text-gray-700 text-base">
-								Check out the rest of my public repositories{" "}
-								<a
-									href="https://github.com/ROEL12037?tab=repositories"
-									className="hover:text-cerulean underline font-semibold"
-									target="_blank">
-									here
-								</a>
-								.
-							</p>
-						</div>
-					</section>
+
+					<ProjectCard
+						repo={{
+							repo: {
+								name: "Want to see more?",
+							},
+						}}
+					/>
 				</section>
 			</section>
 		</main>
