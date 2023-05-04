@@ -47,7 +47,7 @@ export default function Projects({ starredRepos }) {
 										alt="card image"
 										width={440}
 										height={248}
-										className=""
+										className="mx-auto"
 									/>
 									<p className="text-gray-700 text-base">
 										Demo:{" "}
@@ -58,6 +58,7 @@ export default function Projects({ starredRepos }) {
 											{repo.repo.name}
 										</a>
 									</p>
+									<p className="text-black">{repo.repo.description}</p>
 									<p className="text-gray-700 text-base">
 										Created: {formatDate(repo.repo.created_at)}
 									</p>
