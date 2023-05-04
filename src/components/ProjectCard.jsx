@@ -6,9 +6,9 @@ export default function ProjectCard({ repo }) {
 	console.log(repo);
 	return (
 		<>
-			<section className="bg-white rounded-lg shadow-lg">
+			<section className="bg-white rounded-lg shadow-lg relative">
 				<div className="px-6 py-4">
-					<h3 className="font-bold text-gray-800 text-xl mb-2">
+					<h3 className="font-bold text-black text-xl mb-2">
 						{repo.repo.name}
 					</h3>
 
@@ -22,7 +22,7 @@ export default function ProjectCard({ repo }) {
 
 					{repo.repo.description ? (
 						<>
-							<p className="text-gray-700 text-base">
+							<p className="text-black text-base mt-2">
 								Demo:{" "}
 								<a
 									href={repo.repo.homepage}
@@ -32,15 +32,15 @@ export default function ProjectCard({ repo }) {
 								</a>
 							</p>
 
-							<p className="text-black">{repo.repo.description}</p>
+							<p className="text-black mt-2 mb-8">{repo.repo.description}</p>
 
-							<p className="text-gray-700 text-base">
+							<p className="text-black text-base absolute bottom-0 left-0 right-0 px-6 py-4">
 								Created: {formatDate(repo.repo.created_at)}
 							</p>
 						</>
 					) : (
 						<>
-							<p className="text-gray-700 text-base">
+							<p className="text-black text-base mt-2">
 								This website is also one of my projects. But, you can check out
 								the rest of my public work{" "}
 								<a
