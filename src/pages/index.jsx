@@ -27,7 +27,7 @@ export default function Home() {
 
 				<section className="w-full px-4">
 					<h2 className="text-4xl mt-4 text-cerulean">About Me</h2>
-					<blockquote className="max-w-[775px]  font-medium tracking-widest">
+					<blockquote className="max-w-[775px] font-semibold tracking-wider">
 						<p className="mt-2">
 							I am a software developer who designs and deploys full-stack web
 							applications.

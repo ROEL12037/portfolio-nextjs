@@ -8,6 +8,7 @@ export default function Document() {
 					src="https://kit.fontawesome.com/4d71720517.js"
 					crossOrigin="anonymous"
 					async></script>
+
 				<link
 					rel="preconnect"
 					href="https://fonts.googleapis.com"
@@ -15,10 +16,10 @@ export default function Document() {
 				<link
 					rel="preconnect"
 					href="https://fonts.gstatic.com"
-					crossOrigin="anonymous"
+					crossorigin="anonymous"
 				/>
 				<link
-					href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+					href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
 					rel="stylesheet"
 				/>
 			</Head>

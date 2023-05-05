@@ -11,8 +11,6 @@ export default function Projects({ starredRepos }) {
 		initialData: starredRepos,
 	});
 
-	// console.log(data);
-
 	if (error) {
 		return <GetReposError error={error} />;
 	}
@@ -24,7 +22,9 @@ export default function Projects({ starredRepos }) {
 	return (
 		<main className="flex items-center justify-center w-full min-h-[92vh]">
 			<section className="flex flex-col items-center mx-4 mb-4">
-				<h2 className="mb-4 text-4xl text-cerulean">Recent Projects</h2>
+				<h2 className="mb-4 text-4xl text-cerulean font-medium">
+					Recent Projects
+				</h2>
 
 				<section className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
 					{data.map((repo) => {
@@ -39,7 +39,7 @@ export default function Projects({ starredRepos }) {
 					<ProjectCard
 						repo={{
 							repo: {
-								name: "Want to see more?",
+								name: "More?",
 							},
 						}}
 					/>
