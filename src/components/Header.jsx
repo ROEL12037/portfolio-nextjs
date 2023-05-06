@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 export default function Header() {
 	const router = useRouter();
 
-	// styles
 	const activeStyles = "my-auto px-2 py-1 bg-cerulean white";
 	const inactiveStyles = "my-auto px-2 py-1 hover:text-cerulean font-bold";
 
@@ -24,7 +23,7 @@ export default function Header() {
 								? `${activeStyles}`
 								: `${inactiveStyles}`
 						}>
-						<Link href={"/projects"}>Projects</Link>
+						<Link href={"/projects"}>Work</Link>
 					</li>
 					<li
 						className={
