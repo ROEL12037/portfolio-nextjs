@@ -70,8 +70,8 @@ export default function ProjectCard({ repo }) {
 				) : (
 					<>
 						<p className="text-black text-base bold mt-2">
-							This portfolio site is also one of my projects. And, you can check
-							out the rest of my public work{" "}
+							The site you are currently on is also one of my projects. You can
+							check out the rest of my public work{" "}
 							<a
 								href="https://github.com/ROEL12037?tab=repositories"
 								className="hover:text-cerulean underline font-semibold"

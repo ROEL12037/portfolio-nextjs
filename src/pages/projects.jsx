@@ -39,7 +39,7 @@ export default function Projects({ starredRepos }) {
 					<ProjectCard
 						repo={{
 							repo: {
-								name: "More?",
+								name: "Want to see more?",
 							},
 						}}
 					/>

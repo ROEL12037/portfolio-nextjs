@@ -17,7 +17,7 @@ export default function Contact() {
 					id="name"
 					placeholder="Enter your name"
 					required
-					className="border-cerulean border-2 focus:outline-none placeholder:pl-1"
+					className="border-cerulean border-2 focus:outline-none placeholder:pl-1 text-black"
 				/>
 
 				<label
@@ -31,7 +31,7 @@ export default function Contact() {
 					id="email"
 					placeholder="Add your email address"
 					required
-					className="border-cerulean border-2 focus:outline-none placeholder:pl-1"
+					className="border-cerulean border-2 focus:outline-none placeholder:pl-1 text-black"
 				/>
 
 				<label
@@ -40,15 +40,15 @@ export default function Contact() {
 					Message
 				</label>
 				<textarea
-					className="border-cerulean border-2 focus:outline-none min-h-[30vh] placeholder:pl-1"
+					className="border-cerulean border-2 focus:outline-none min-h-[30vh] placeholder:pl-1 text-black"
 					name="message"
 					id="message"
-					placeholder="Type your message."
+					placeholder="Form submissions are currently disabled. You can get ahold of me through LinkedIn or Twitter."
 					required></textarea>
 
 				<button
 					type="submit"
-					className="bg-cerulean rounded-b-sm white"
+					className="bg-cerulean rounded-b-sm white hover:cursor-not-allowed"
 					disabled>
 					Submit Request
 				</button>
