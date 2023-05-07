@@ -1,7 +1,7 @@
 export default function Form() {
 	return (
 		<form
-			className="flex flex-col mb-4 min-w-[90vw] p-1 bg-alice rounded-sm"
+			className="flex flex-col mb-4 p-1 bg-alice rounded-sm min-w-[90%] sm:min-w-[80%] md:min-w-[75%]"
 			action=""
 			method="post">
 			<label
