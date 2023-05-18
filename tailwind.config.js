@@ -16,6 +16,7 @@ export const theme = {
 		},
 		colors: {
 			cerulean: "#0E7490",
+			moonstone: "#78ADBF",
 			alice: "#F6FCFF",
 		},
 		fontFamily: { sans: ["Poppins", ...defaultTheme.fontFamily.sans] },

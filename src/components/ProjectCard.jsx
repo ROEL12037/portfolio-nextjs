@@ -4,8 +4,6 @@ import { formatDate } from "@/utils/dateHelpers";
 import { formatTitle } from "@/utils/stringHelpers";
 
 export default function ProjectCard({ repo }) {
-	console.log(repo.repo.name);
-
 	let imageURL;
 
 	switch (repo.repo.name) {
@@ -50,7 +48,7 @@ export default function ProjectCard({ repo }) {
 							<a
 								href={repo.repo.homepage}
 								target="_blank"
-								className="text-cerulean hover:opacity-60 underline font-semibold">
+								className="text-cerulean hover:text-moonstone underline font-semibold">
 								{repo.repo.name}
 								<span className="text-xs ml-1 fas fa-arrow-up-right-from-square"></span>
 							</a>
@@ -75,7 +73,7 @@ export default function ProjectCard({ repo }) {
 							deployed on Vercel. You can check out the rest of my public work{" "}
 							<a
 								href="https://github.com/ROEL12037?tab=repositories"
-								className="hover:text-cerulean underline font-semibold"
+								className="text-cerulean hover:text-moonstone underline font-semibold"
 								target="_blank">
 								here
 								<span className="text-xs ml-1 fas fa-arrow-up-right-from-square"></span>

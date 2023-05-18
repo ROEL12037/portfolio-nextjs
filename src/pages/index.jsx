@@ -36,7 +36,7 @@ export default function Home() {
 							If you&apos;re looking to build a site or solution, feel free to{" "}
 							<Link
 								href={"/contact"}
-								className="hover:text-cerulean underline font-semibold">
+								className="text-cerulean hover:text-moonstone underline font-semibold">
 								reach out
 							</Link>
 							. I am well versed in technologies such as: HTML, CSS, JavaScript,
@@ -44,7 +44,7 @@ export default function Home() {
 							projects I&apos;ve worked on{" "}
 							<Link
 								href={"/projects"}
-								className="hover:text-cerulean underline font-semibold">
+								className="text-cerulean hover:text-moonstone underline font-semibold">
 								here
 							</Link>
 							.
