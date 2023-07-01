@@ -15,7 +15,7 @@ export default function ProjectCard({ repo }) {
 			imageURL =
 				"https://res.cloudinary.com/di2ps252x/image/upload/v1683319805/reminders_wzpxkk.png";
 			break;
-		case "tea-shop-webisite-demo":
+		case "tea-shop-website-demo":
 			imageURL =
 				"https://res.cloudinary.com/di2ps252x/image/upload/v1683319805/tea_prglsd.png";
 			break;
