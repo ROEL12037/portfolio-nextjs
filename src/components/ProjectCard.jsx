@@ -4,6 +4,7 @@ import { formatDate } from "@/utils/dateHelpers";
 import { formatTitle } from "@/utils/stringHelpers";
 
 export default function ProjectCard({ repo, isOddClass }) {
+	console.log(repo.repo.homepage);
 	let imageURL;
 
 	switch (repo.repo.name) {
@@ -18,6 +19,10 @@ export default function ProjectCard({ repo, isOddClass }) {
 		case "tea-shop-website-demo":
 			imageURL =
 				"https://res.cloudinary.com/di2ps252x/image/upload/v1683319805/tea_prglsd.png";
+			break;
+		case "group-activities":
+			imageURL =
+				"https://res.cloudinary.com/di2ps252x/image/upload/v1696264512/in_vite_nr1mda.png";
 			break;
 		default:
 			imageURL =
@@ -48,7 +53,9 @@ export default function ProjectCard({ repo, isOddClass }) {
 							<a
 								href={repo.repo.homepage}
 								target="_blank"
-								className="text-cerulean hover:text-moonstone underline font-semibold">
+								className={`text-cerulean hover:text-moonstone underline font-semibold ${
+									!repo.repo.homepage && "disabled"
+								}`}>
 								{repo.repo.name}
 								<span className="text-xs ml-1 fas fa-arrow-up-right-from-square"></span>
 							</a>
