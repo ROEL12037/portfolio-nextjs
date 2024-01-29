@@ -8,17 +8,17 @@ export default function ProjectCard({ repo, isOddClass }) {
 	let imageURL;
 
 	switch (repo.repo.name) {
-		case "cienhoras":
-			imageURL =
-				"https://res.cloudinary.com/di2ps252x/image/upload/v1683319805/events_fbgn3a.png";
-			break;
 		case "reminders-app-local-auth":
 			imageURL =
 				"https://res.cloudinary.com/di2ps252x/image/upload/v1683319805/reminders_wzpxkk.png";
 			break;
-		case "tea-shop-website-demo":
+		case "cienhoras":
 			imageURL =
-				"https://res.cloudinary.com/di2ps252x/image/upload/v1683319805/tea_prglsd.png";
+				"https://res.cloudinary.com/di2ps252x/image/upload/v1683319805/events_fbgn3a.png";
+			break;
+		case "vroom-groom":
+			imageURL =
+				"https://res.cloudinary.com/di2ps252x/image/upload/v1706566448/vroomgroom.png";
 			break;
 		case "group-activities":
 			imageURL =

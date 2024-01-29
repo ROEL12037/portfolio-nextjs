@@ -29,19 +29,8 @@ export default function Home() {
 					<h2 className="text-4xl mt-4 text-cerulean">About Me</h2>
 					<blockquote className="max-w-[775px] font-semibold tracking-wider">
 						<p className="mt-2">
-							I&apos;m a software developer who crafts visually appealing and
-							reliable full-stack web applications.
-						</p>
-
-						<p className="mt-2">
-							As a firm believer in continuous growth, I challenge myself daily
-							with Codewars problems. My current score is:
-							{/* eslint-disable-next-line @next/next/no-img-element*/}
-							<img
-								src={"https://www.codewars.com/users/roel12037/badges/micro"}
-								alt="codewars-badge"
-								className="inline-block"
-							/>
+							I&apos;m a software developer dedicated to crafting visually
+							appealing and reliable full-stack web applications.
 						</p>
 
 						<p className="mt-2">
@@ -52,22 +41,17 @@ export default function Home() {
 								className="text-cerulean hover:text-moonstone underline font-semibold">
 								reach out
 							</Link>
-							. I&apos;m proficient in technologies such as: HTML, CSS,
-							JavaScript, REST APIs, Node.js, React, and SQL/NoSQL DBs. Explore
-							some the projects I&apos;ve worked on{" "}
-							<Link
-								href={"/projects"}
-								className="text-cerulean hover:text-moonstone underline font-semibold">
-								here
-							</Link>
-							.
+							. I bring a diverse set of skills to every project with a proven
+							track record in SaaS companies across the restaurant, travel, and
+							financial sectors.
 						</p>
 						<p className="mt-2">
 							On a more personal note, when I&apos;m not at my desk, I love to
-							take advantage of what Austin has to offer. You might find me
-							enjoying stand-up comedy, savoring brisket or tacos, or staying
-							active with biking, hiking, paddleboarding, co-ed soccer, ultimate
-							frisbee, and sand volleyball.
+							take advantage of what the city has to offer. You might catch me
+							enjoying stand-up comedy, savoring the food &#40;i.e., brisket,
+							tacos, pizza&#41;, or staying active with biking, beach
+							volleyball, ultimate frisbee, co-ed soccer, paddleboarding, and
+							hiking.
 						</p>
 					</blockquote>
 				</section>

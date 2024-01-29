@@ -15,7 +15,7 @@ export default function Header() {
 						className={
 							router.pathname == "/" ? `${activeStyles}` : `${inactiveStyles}`
 						}>
-						<Link href={"/"}>Roel Codes</Link>
+						<Link href={"/"}>RoelCodes</Link>
 					</li>
 					<li
 						className={
@@ -23,7 +23,7 @@ export default function Header() {
 								? `${activeStyles}`
 								: `${inactiveStyles}`
 						}>
-						<Link href={"/projects"}>Work</Link>
+						<Link href={"/projects"}>Projects</Link>
 					</li>
 					<li
 						className={
