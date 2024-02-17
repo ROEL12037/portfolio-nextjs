@@ -1,24 +1,30 @@
+// import packages
 import useSWR from "swr";
 
+// import components
 import Spinner from "@/components/Spinner";
 import ProjectCard from "@/components/ProjectCard";
 import GetReposError from "@/components/GetReposError";
 
+// import utils
 import { fetcher } from "@/lib/octokit";
 
 export default function Projects({ starredRepos }) {
+	// fetch data using the useSWR hook
 	const { data, error } = useSWR("/api/get-starred-repos", fetcher, {
 		initialData: starredRepos,
 	});
 
+	// display error component if there is an error with data retrieval
 	if (error) {
 		return <GetReposError error={error} />;
 	}
-
+	// display a spinner while data loads
 	if (!data) {
 		return <Spinner />;
 	}
-
+	// set appropriate bool val to isOdd by determining if mum of items in data is odd
+	// add 1 to data.length to avoid division by 0 if data is empty
 	const isOdd = (data.length + 1) % 2 !== 0;
 
 	return (
@@ -29,6 +35,7 @@ export default function Projects({ starredRepos }) {
 				</h2>
 
 				<section className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+					{/* iterate through returned data and render ProjectCard for each */}
 					{data.map((repo) => {
 						return (
 							<ProjectCard
@@ -44,6 +51,7 @@ export default function Projects({ starredRepos }) {
 								name: "Want to see more?",
 							},
 						}}
+						// depending on isOdd value, pass appropriate class to isOddClass
 						isOddClass={isOdd ? "sm:col-span-2" : ""}
 					/>
 				</section>
